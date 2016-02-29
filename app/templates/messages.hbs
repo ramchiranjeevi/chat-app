@@ -1,0 +1,10 @@
+<div>{{#link-to 'messages.new'}}Add a new message{{/link-to}}</div>
+
+{{outlet}}
+
+<div>Messages</div>
+{{#each model as |message|}}
+  {{#unless message.isNew}}
+    <div>{{message.name}}- {{message.body}}</div>
+  {{/unless}}
+{{/each}}
